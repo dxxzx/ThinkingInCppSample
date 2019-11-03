@@ -5,7 +5,8 @@ progs := CopyInts CopyStrings CopyVector InsertVector CopyInts2 \
 	CopyIntsFromFile GreaterThanN CopyInts4 CountNotEqual \
 	FBinder BinderValue PtrFun1 PtrFun2 MemFun1 MemFun2 \
 	FindBlanks MemFun3 ComposeTry ComposeFinal FillGenerateTest \
-	Counting
+	Counting Manipulations SearchReplace Comparison Removing \
+
 
 OUT_PROGS = $(addprefix $(OUT)/, $(progs))
 
@@ -90,6 +91,18 @@ $(OUT)/FillGenerateTest: FillGenerateTest.cpp
 	g++ -o $@ $^
 
 $(OUT)/Counting: Counting.cpp Generators.cpp
+	g++ -o $@ $^
+
+$(OUT)/Manipulations: Manipulations.cpp Generators.cpp
+	g++ -o $@ $^
+
+$(OUT)/SearchReplace: SearchReplace.cpp
+	g++ -o $@ $^
+
+$(OUT)/Comparison: Comparison.cpp
+	g++ -o $@ $^
+
+$(OUT)/Removing: Removing.cpp Generators.cpp
 	g++ -o $@ $^
 
 clean:

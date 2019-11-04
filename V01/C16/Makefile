@@ -2,7 +2,9 @@ OUT ?= out
 CC = g++
 CFLAGS += -L$(LIB)
 
-progs := IntStack Array
+progs := IntStack Array Array2 StackTemplateTest Array3 \
+    TStackTest
+
 libs = fibonacci
 
 OUT_PROGS = $(addprefix $(OUT)/, $(progs))
@@ -23,6 +25,18 @@ $(OUT)/IntStack: IntStack.cpp $(LIB)/libfibonacci.so $(OUT)
 	$(CC) $(CFLAGS) -lfibonacci -o $@ $<
 
 $(OUT)/Array: Array.cpp $(OUT)
+	$(CC) $(CFLAGS) -o $@ $<
+
+$(OUT)/Array2: Array2.cpp $(OUT)
+	$(CC) $(CFLAGS) -o $@ $<
+
+$(OUT)/StackTemplateTest: StackTemplateTest.cpp fibonacci.cpp $(OUT)
+	$(CC) $(CFLAGS) -o $@ $< fibonacci.cpp
+
+$(OUT)/Array3: Array3.cpp $(OUT)
+	$(CC) $(CFLAGS) -o $@ $<
+
+$(OUT)/TStackTest: TStackTest.cpp $(OUT)
 	$(CC) $(CFLAGS) -o $@ $<
 
 clean:

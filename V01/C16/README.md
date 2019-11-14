@@ -19,6 +19,10 @@
 - [OwnerStack.h](OwnerStack.h)
 - [OwnerStackTest.cpp](OwnerStackTest.cpp)
 ## Holding objects by value
+- [ValueStack.h](ValueStack.h)
+- [SelfCounter.h](SelfCounter.h)
+- [SelfCounter.cpp](SelfCounter.cpp)
+- [ValueStackTest.cpp](ValueStackTest.cpp)
 ## Introducing iterators
 ### Stack with iterators
 ### PStash with iterators

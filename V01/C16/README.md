@@ -24,6 +24,8 @@
 - [SelfCounter.cpp](SelfCounter.cpp)
 - [ValueStackTest.cpp](ValueStackTest.cpp)
 ## Introducing iterators
+- [IterIntStack.cpp](IterIntStack.cpp)
+- [NestedIterator.cpp](NestedIterator.cpp)
 ### Stack with iterators
 ### PStash with iterators
 ## Why iterators?
